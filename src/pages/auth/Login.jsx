@@ -82,6 +82,7 @@ const Login = () => {
           {isLoading ? "Loading.." : "Login"}
         </button>
       </form>
+      <p>Dont have account <button onClick={()=>navigate("/register")}>register</button></p>
     </div>
   );
 };
