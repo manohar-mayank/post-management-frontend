@@ -46,7 +46,7 @@ const PostAdd = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/post",
+        `${import.meta.env.VITE_SERVER_URL}/post`,
         formdata,
         {
             headers: {

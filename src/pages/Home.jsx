@@ -11,7 +11,7 @@ const Home = () => {
     const fetchPost = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get("http://localhost:3000/api/post");
+        const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/post`);
         // console.log("response", response);
         setPost(response.data.data);
       } catch (error) {

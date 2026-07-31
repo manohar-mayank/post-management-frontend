@@ -25,7 +25,7 @@ const Login = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/login",
+        `${import.meta.env.VITE_SERVER_URL}/auth/login`,
         formData,
       );
       console.log("response", response);
