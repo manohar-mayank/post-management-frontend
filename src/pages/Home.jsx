@@ -1,8 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { toast } from "sonner";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(null);
   const [posts, setPost] = useState([]);
@@ -29,6 +31,7 @@ const Home = () => {
   return (
     <div>
       <h1>Post List</h1>
+      <button onClick={()=>navigate("/login")}>login</button>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
         {isLoading && <p>loading...</p>}
         {isError && <p>{isError}</p>}
